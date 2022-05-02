@@ -1,0 +1,28 @@
+<%- include('partials/header') -%>
+
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+<h1>Home</h1>
+<p><%=content%></p>
+
+<main role="main" class="container">
+  <div class="my-3 p-3 bg-white rounded box-shadow">
+    <h6 class="border-bottom border-gray pb-2 mb-0">Your Journals.</h6>
+    <% post.forEach(function(posts){%>
+   
+      <div class="media text-muted pt-3">
+        <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+          <strong class="d-block text-gray-dark"><%= posts.title%></strong>
+          <%= posts.content.substring(0,100)+ "..."%>
+          <a href="/post/<%=posts._id%>">Read More</a>
+          <a class="btn btn-primary" href="/delete/<%= posts._id%>">Delete</a>
+        </p>
+      </div>
+   
+    <%})%>
+  </div>
+</main>
+
+

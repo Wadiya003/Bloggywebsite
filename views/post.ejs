@@ -1,0 +1,11 @@
+<%- include('partials/header') -%>
+
+<div class="card">
+  <div class="card-header">
+    <%=title%>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%=content%></p>
+      <a class="btn btn-primary" href="/delete/<%= posts._id%>">Delete</a>
+  </div>
+</div>

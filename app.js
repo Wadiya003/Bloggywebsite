@@ -12,11 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 const homeStartingContent = "Welcome to your Daily journal. All your Existing Journals/Blogs will show up on this page. To compose a new blog, go to Compose section.";
 
-//database
-// mongoose.connect(process.env.DB_URL, {
-//   useNewUrlParser: true,
-// }); 
-//schema
+
 const uri = process.env.DB_URL;
 mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true});
 console.log(process.env.DB_URL);
@@ -81,6 +77,6 @@ app.get("/delete/(:id)", function(req, res, next) {
       }
   });
 })
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });

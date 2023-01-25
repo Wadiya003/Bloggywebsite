@@ -28,5 +28,5 @@
   <li>BootStrap
 </li>
 <h1>Yet To work on</h1>
-<p>As for now, The website is working on a commmon dataase that means anyone can delete anyone's blog HAHA , I have to fix that by creating individual Database that will be possible  if i create a login page and sepreate database connected with it ! If You have any other suggestion, PLease do lemme know!</p>
+<p>As for now, The website is working on a commmon dataase that means anyone can delete anyone's blog HAHA , I have to fix that by creating individual Database.</p>
 
